@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Projekt, uge 12</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: none;
+			justify-content: left;
+			top: 0;
+		}
+
+        /* Menulinjets billede */
+		.background {
+            background-image: url('https://wallpaper.dog/large/5624.jpg');
+			background-size: cover;
+		}
+
+        /* home iconet placering (centrering) */
+        .home {
+            padding: 14px 16px;
+        }
+
+        /* Dropdowns indeholdets farve/baggrund */
+        .navbar a {
+        float: left;
+        font-size: 18px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        
+        }
+
+        /* Dropdown button Ved dropdown farver, længde og bredte */
+        .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        }
+
+        /* Baggrundsfarven til selve i navigationslinjen, når man tager musen der */
+        .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: rgb(241, 71, 165);
+        }
+
+        /* Dropdown indeholdet (hidden by default) */
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0px 8px 16px 0px rgb(241, 71, 165);
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        display: block;
+        text-align: center;
+        }
+
+        /* baggrundsfarven på selve i menulinjes dropdown indeholdet */
+        .dropdown-content a:hover {
+        background-color: rgb(241, 71, 165);
+        }
+
+        /* Vis valgmuligheder under selve menulinjens dropdown */
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+
+        /* Den første boksets indehold: billede, tekstfarve, beliggenhed og længde på selve boksen */
+		.firstsection {
+            background-image: url("https://i.pinimg.com/originals/0a/97/20/0a97201435392b116ea3ef9ac7ce76e0.jpg");
+			height: 700px;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: lightgreen;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+        /* Den anden boksets indehold: billede, længde på boksen */
+		.secondsection {
+			background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/06/12/101402/046f3c4c3ca8bed19ba57982ee665b5f-700.jpg");
+			height: 400px;
+		}
+
+        .box-sec {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: lightgreen;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+        /* Den trejde boksets indehold: længde, hvor den skal ligge, billede og tekstfarve */
+        .thirdsection {
+			height: 600px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            background-image: url("https://ak.picdn.net/shutterstock/videos/1408804/thumb/5.jpg?ip=x480");
+            color: lightgreen;
+		}
+
+        /* Den fjerde boksets indehold: længde, hvor den skal ligge, billede og tekstfarve */
+        .fourthsection {
+            height: 400px;
+            display: flex;
+			align-items: center;
+			justify-content: center;
+            background-image: url("https://cdn.wallpapersafari.com/25/48/1tTMo2.jpg");
+			color: lightgreen;
+		}
+
+        /* Boksernes beliggenhed */
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+        /* Teksternes skrifttyper og størrelser */
+		.text-big {
+			font-family: 'Courier New';
+			font-size: 40px;
+		}
+
+		.text-small {
+			font-size: 18px;
+		}
+
+        /* Knappen ved bar røv feltet */
+		.def {
+			background: transparent;
+            color: lightpink;
+			cursor: pointer;
+		}
+
+        /* Knappen ved hangman feltet */
+		.ghi {
+			background: transparent;
+            color: lightpink;
+			cursor: pointer;
+		}
+
+        /* Knappen ved gæt et tal feltet */
+		.jkl {
+			background: transparent;
+            color: lightpink;
+			cursor: pointer;
+		}
+
+        /* Knappen ved vendespillet feltet */
+		.mno {
+			background: transparent;
+            color: lightpink;
+			cursor: pointer;
+		}
+        
+        /* Knappens udseende */
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 10px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: pink;
+		}
+	</style>
+</head>
+
+
+
+
+<body>
+	<nav class="navbar background">
+		<div class="navbar">
+        
+            <div class="home">
+                <html>
+                <title>W3.CSS</title>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <body>
+                <p style="color: gold;">
+                <i class="fa fa-home"></i>
+                </html>
+                </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">GAMES
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <ul>
+                <li><a href="barrøv.html">Bar Røv</a></li>
+                <li><a href="hangman.html">Hangman</a></li>
+                <li><a href="gætettal.html">Gæt et tal</a></li>
+                <li><a href="vendespil.html">Vendespil</a></li>
+                </ul>
+              </div>   
+            
+	</nav>
+
+
+    
+
+    <section class="thirdsection">
+
+        <h1 class="sectionTag text-big">Gæt et tal &nbsp;</h1>
+
+
+    </div>
+</section>
+
+<footer class="background">
+    <p class="text-footer">
+        Copyright ©-if u can read this then u must be bored or this's probably too visible. Lavet af Lili R.B
+    </p>
+
+
+</footer>
+
+</body>
+
+</html>
